@@ -1,0 +1,32 @@
+
+# avoid data files
+*data/
+*data/*
+data/*
+*.dta
+*.csv
+*.xlsx
+
+# output
+*output/
+*output/*
+output/*
+
+# From R
+*.RData
+*.Rhistory
+*.rds
+
+# iOS temporary files
+*.stswp
+*.DS_Store
+
+# Server 
+*.log
+
+
+# shapefiles
+*.dbf
+*.prj
+*.shp
+*.shx

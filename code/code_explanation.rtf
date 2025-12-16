@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+There was a python file that did all of the messy data extraction from the pdf that gives completions from 1969-1994. It outputs a still, mostly raw file called \'93pdf_data.dta\'94. The columns are \
+| degree_name | start_year | sex | degree_type | degree_count |\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 degree_name: usually the name from the pdf itself, albeit with some minor adjustments in formatting\
+degree_type: bachelors, masters, doctorate\
+degree_count: degrees_awarded during the year \'93start_year\'94\
+\
+First Harmonization:\
+\'93degree_name2degree_name_sp.dta\'94 is a crosswalk with columns:\
+| degree_name | degree_name_sp |\
+\
+- This crosswalk is meant to aggregate completions data to time comparable categories. Hierarchical duplication also happens here. E.g. There is a major for all foreign languages, but there is also a major for french, spanish, etc.\
+- Another step is taken is that \'93other\'94 categories are created. **EXPLAIN THIS FURTHER**\
+\
+After these steps, time-harmonized data, hierarchically preserved panel from 1969-1995 is saved as \'93pdf_data_consistent\'94\
+ \
+2. Creates panel from NCES data and harmonizes it from cipcode-year to cip1990sp-v1\
+\
+3. Concatenates together PDF panel and NCES panel. Then performs a second reharmonization to CIP1990sp_v2. Some detail is lost, but these categories are much better bc there is less noise with categorical reclassification. \
+\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+}
